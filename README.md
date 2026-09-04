@@ -1,47 +1,63 @@
-# Introduction to GitHub
+# GitHub Copilot Skills
 
-_Get started using GitHub in less than an hour._
+A hands-on learning repository for building effective, safe GitHub Copilot habits.
 
-## Welcome
+## Learning goals
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” exercise guides you through everything you need to start contributing in less than an hour.
+By working through these skills, you will learn to:
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This exercise is a great introduction for your first day on GitHub.
-- **How long**: This exercise takes less than one hour to complete.
+- Give Copilot clear context, constraints, and acceptance criteria.
+- Use chat, inline suggestions, and agent mode for the right kind of task.
+- Review, test, and refine AI-generated code instead of accepting it blindly.
+- Protect secrets, privacy, and project conventions while using AI assistance.
 
-In this exercise, you will:
+## Skill path
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+Work through the skills in order. Keep each exercise in a branch and open a pull request when it is complete.
 
-### How to start this exercise
+| Skill | Practice | Outcome |
+| --- | --- | --- |
+| 1. Prompting with context | Ask Copilot to explain a small part of a codebase and propose a scoped change. | A prompt that names the goal, relevant files, constraints, and success criteria. |
+| 2. Generating code | Ask Copilot for a small implementation with tests. | A reviewed change where tests describe the intended behavior. |
+| 3. Debugging | Provide an error message, reproduction steps, and expected behavior. | A root-cause explanation and a minimal verified fix. |
+| 4. Reviewing code | Use Copilot to summarize a diff and identify edge cases. | Review notes that you independently verify before acting on them. |
+| 5. Working with agents | Delegate a well-bounded task with repository conventions and validation steps. | A plan, implementation, and evidence that the requested checks pass. |
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+## Prompt template
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=introduction-to-github&owner=%40me&name=skills-introduction-to-github&description=Exercise:+Introduction+to+GitHub&visibility=public)
+Use this template to make requests specific and reviewable:
 
-<details>
-<summary>Having trouble? 🤷</summary><br/>
+```text
+Goal: <the outcome to achieve>
+Context: <relevant files, behavior, or error>
+Constraints: <scope, compatibility, style, and dependencies>
+Acceptance criteria: <observable results and tests>
+Please explain the proposed approach before changing files.
+```
 
-When copying the exercise, we recommend the following settings:
+## Practice workflow
 
-- For owner, choose your personal account or an organization to host the repository.
+1. Read the relevant code and existing tests before prompting.
+2. Ask for a small, explicit change using the template above.
+3. Review the suggestion for correctness, security, and unintended scope.
+4. Run the project's existing targeted tests or checks.
+5. Record what worked, what you changed, and what you will try differently.
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+## Responsible use checklist
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+Before committing AI-assisted work:
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- [ ] I understand the code and can explain the change.
+- [ ] I checked generated code for correctness, security, and licensing fit.
+- [ ] I did not provide secrets, private data, or sensitive customer information.
+- [ ] I ran relevant tests and reviewed the diff.
+- [ ] I documented any assumptions or follow-up work.
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+## Suggested first exercise
 
-</details>
+Choose a small issue in a project you know. Use the prompt template to ask Copilot to propose a minimal fix and a targeted test. Review the proposal, implement only the parts you understand, and open a pull request that explains the validation performed.
 
----
+## Resources
 
-&copy; 2026 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+- [GitHub Copilot documentation](https://docs.github.com/copilot)
+- [GitHub Copilot best practices](https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot)
